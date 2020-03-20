@@ -7,7 +7,7 @@
 ## Docker Installation
 - Clone this repository
 ```
-git clone https://github.com/thynameisjayvee/JTLaravelDockerize.git <your-project-name>
+git clone https://github.com/thynameisjayvee/willbox_docker.git <your-project-name>
 ```
 - Copy environment configurations (go to your project directory and copy configuration file)
 ```
@@ -23,7 +23,7 @@ docker-compose up -d --build
 ## Laravel Installation
 - navigate to docker php (from your project directory)
 ```
-docker exec -it php sh
+docker exec -it php-willbox sh
 ```
 - Install laravel dependencies
 ```
@@ -37,10 +37,12 @@ cp .env.example .env
 - Install required laravel keys and migrate database
 ```
 php artisan key:generate
-php artisan jwt:secret
 php artisan migrate
 ```
-- Install node modules 
+## Install node modules
+- Exit from Docker php sh
+- navigate to docker node
+- docker exec -it node-willbox sh
 ```
 npm install or yarn install
 ```
@@ -49,3 +51,9 @@ npm install or yarn install
 npm run watch or yarn run watch --to watch files during development
 npm run prod or yarn run prod --for production server
 ```
+
+## Browser
+```
+localhost:10080 --default
+or
+localhost:<your env WEB_PORT>

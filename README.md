@@ -1,4 +1,4 @@
-# JTLaravelDockerize
+# Willbox
 
 ## System requirements
 - Docker (ubuntu/mac)

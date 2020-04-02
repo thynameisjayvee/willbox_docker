@@ -1,6 +1,5 @@
 const path = require('path')
 const mix = require('laravel-mix')
-require('laravel-mix-versionhash')
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 // plugins
@@ -27,6 +26,7 @@ mix
   .disableNotifications()
 
 if (mix.inProduction()) {
+  require('laravel-mix-versionhash')
   mix
     // .extract() // Disabled until resolved: https://github.com/JeffreyWay/laravel-mix/issues/1889
     // .version() // Use `laravel-mix-versionhash` for the generating correct Laravel Mix manifest file.
